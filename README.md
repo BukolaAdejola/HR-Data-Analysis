@@ -2,10 +2,15 @@
 
 
 ![Hr pix](https://github.com/user-attachments/assets/37f9bba2-2f4a-4fd3-98dd-8458eed53138)
+
 ## Table of Content
+
 - [Introduction](#Introduction)
+
 - [Data Highlights](#Data-Highlights)
+
 - [Project Goal](#Project-Goal)
+
 - [Data Scrubbing](#Data-Scrubbing)
 - [Data Analysis](#Data-Analysis)
 - [Recommendation](#Recommendation)
@@ -34,6 +39,9 @@ The table used contains15 columns and 22214 rows
 - Tenure: Duration of the employee's service.
 - Age: Current age of the employee.
 
+
+  <img width="929" alt="HR screen" src="https://github.com/user-attachments/assets/d78e3a1a-7b5c-44b0-a6bf-9df4c0d3dbee" />
+
 ## Project Goal
 1. What is the gender breakdown in the Company?
 2. How many employees work remotely for each department? 
@@ -49,13 +57,15 @@ The table used contains15 columns and 22214 rows
 12. What is the average length of employment in the company?
 
 ## Data Scrubbing
-- Change table name
+
+# Change table name
+
   ```
   Sql
- Select * from classdb.`hr data`;
 Rename table `hr data` to hr_data;
 ```
-- Rename column name
+
+# Rename column name
 ```
 Sql
 Alter table hr_data
@@ -84,6 +94,7 @@ Alter table hr_data
  update hr_data
  set Age = ceil(datediff(current_date(),birth_date)/365);
  ```
+
 ## Data Analysis
 1.	What is the gender breakdown in the Company?
 Insights: The company has 11288 males, 10321 females and 605 non-conforming.
